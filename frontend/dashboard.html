@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div>
+    <h2 id="welcome"></h2>
+    <p>Let’s make today productive ✨</p>
+  </div>
+  <div class="summary-box">
+    <p>📅 <span id="today"></span></p>
+    <p>⏱ Sessions: <span id="sessions">0</span></p>
+    <p>🌷 Garden Level: <span id="gardenLevel">0</span></p>
+  </div>
+</header>
+
+<div class="grid">
+
+  <div class="card">
+    <h3>⏰ Pomodoro Focus</h3>
+    <p id="timer">25:00</p>
+    <button onclick="startPomodoro()">Start</button>
+    <button onclick="stopPomodoro()">Stop</button>
+    <button onclick="resetPomodoro()">Reset</button>
+  </div>
+
+  <div class="card">
+    <h3>🔔 Reminders</h3>
+    <input id="reminderInput" placeholder="Add reminder">
+    <button onclick="addReminder()">Add</button>
+    <ul id="reminderList"></ul>
+  </div>
+
+  <div class="card">
+    <h3>🎯 Daily Goal</h3>
+    <input id="goalInput" placeholder="Today's goal">
+    <button onclick="saveGoal()">Save</button>
+    <p id="goalDisplay"></p>
+  </div>
+
+  <div class="card">
+    <h3>📔 Personal Diary</h3>
+    <a href="diary.html">Open Diary</a>
+  </div>
+
+</div>
+
+<!-- 🌷 My Garden -->
+<section class="garden">
+  <h3>🌸 My Garden</h3>
+  <div id="flowers"></div>
+  <p>Flowers bloom when you stay consistent!</p>
+</section>
+
+<script src="js/storage.js"></script>
+<script src="js/pomodoro.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/garden.js"></script>
+</body>
+</html>
